@@ -1,0 +1,10 @@
+<view class="iconnBar">
+  <view class="iconn" wx:for="{{iconList}}" wx:key="key" >
+    <view class="iconn_item" id="{{item.url}}">
+      <navigator url='../{{item.url}}' class="iconn_item_url">
+        <image class="iconn_item_image" src="{{item.icon}}"></image>
+        <text>{{item.name}}</text>
+      </navigator>
+    </view>
+  </view>
+</view>

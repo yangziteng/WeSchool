@@ -1,10 +1,11 @@
 const app = getApp()
 var startX, endX;
 var moveFlag = true;
-
+var util = require("../../utils/util.js")
 
 Page({
   data: {
+    onShowCurriculumPoint: 0,
     statusBarHeight: getApp().globalData.statusBarHeight,
     lineHeight: getApp().globalData.lineHeight,
     rectHeight: getApp().globalData.rectHeight,
@@ -60,6 +61,19 @@ Page({
     Week: ["一", "二", "三", "四", "五", "六", "七"], // 星期 [1,2,3,4,5,6,7]
     WeekIndex: 0,
     addSubmitStyle: false
+  },
+
+  showCurriculumPoint: function () {
+    if (this.data.onShowCurriculumPoint === 0) {
+      this.setData({
+        onShowCurriculumPoint: util.getweekString()
+      })
+    } else {
+      this.setData({
+        onShowCurriculumPoint: 0
+      })
+    }
+
   },
 
   onLoad: function (options) {

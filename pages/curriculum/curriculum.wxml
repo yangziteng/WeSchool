@@ -1,12 +1,9 @@
-
-
-
 <view style="z-index:2; position:fixed; background-color: white;">
   <!-- 头部 -->
   <view>
     <view style="height: {{statusBarHeight}}px;" />
     <view style=" height: {{lineHeight}}px;">
-      <view class="cur-week" style="height: {{rectHeight + 10}}px;">
+      <view bindtap="showCurriculumPoint" class="cur-week" style="height: {{rectHeight + 10}}px;">
         <text>{{curWeek}}</text>
         <image class="cur-week-img" src="./images/箭头 下.png" />
       </view>
@@ -16,14 +13,20 @@
   <!-- 课表弹出 -->
   <scroll-view
     style="height: 140rpx; width: 750rpx; background-color: #EDEDED; padding-left: 10rpx; white-space: nowrap;"
-    scroll-x="true" enable-flex="false" bounces="true" show-scrollbar="false">
-    <view style="margin-top:15rpx; font-size: 24rpx; text-align: center; width: 130rpx;  display: inline-block;" wx:key="item"
-      wx:for="(item, index) in 20">
-      <text>第{{index+1}}周</text>
+    scroll-x="true" scroll-into-view="index{{onShowCurriculumPoint}}" enable-flex="false" scroll-with-animation="true"
+    bounces="true" show-scrollbar="false" wx:if="{{onShowCurriculumPoint}}">
+    <view id="index{{index+1}}"
+      style="font-size: 24rpx; text-align: center; width: 130rpx;  display: inline-block;"
+      wx:key="item" wx:for="(item, index) in 20">
+    <view style=" background-color: aqua; height: 110rpx; top: 12rpx; ">
+
+      <view style="padding-top: 15rpx; ">第{{index+1}}周</view>
+
       <view style="padding-top:5rpx; margin-left: 16rpx; width: 110rpx;">
         <view wx:for="{{35}}" wx:key="idx"
           style="margin:2rpx; float:left; display: flex; flex-direction:row; flex-wrap:wrap; align-content: space-between; ">
           <view style="border-radius: 100rpx; width: 11rpx; height: 11rpx; background-color: #D4D4D4;"></view>
+        </view>
         </view>
       </view>
     </view>
@@ -41,9 +44,12 @@
   </view>
 </view>
 
-<view style="padding-top: {{140 + 65 + (statusBarHeight + lineHeight) * 2}}rpx; width: 100%;"></view>
+<view
+  style="padding-top: {{(onShowCurriculumPoint? 140: 0) + 65 + (statusBarHeight + lineHeight) * 2}}rpx; width: 100%;">
+</view>
 
-<view style="z-index: -1;" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd" animation="{{ani1}}">
+<view style="z-index: -1;" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"
+  animation="{{ani1}}">
   <!-- 滑块部分 -->
   <scroll-view wx:if="{{wlist.length != 0}}">
 

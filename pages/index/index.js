@@ -25,6 +25,9 @@ Page({
     var configData = wx.getStorageSync('configData')
     var personalInformation = wx.getStorageSync('personalInformation')
     var curriculum = personalInformation.curriculum;
+    if(!curriculum){
+      return
+    }
     let xq = new Date().getDay();
     if (xq == 0) {
       xq = 7;

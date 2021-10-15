@@ -1,0 +1,38 @@
+<!--index.wxml-->
+
+<view class="container">
+  <!-- icon条 -->
+  <view style="margin-left:10rpx">
+    <iconBar iconList="{{iconList}}"></iconBar>
+  </view>
+  <!-- 通知拦 -->
+  <view wx:if="{{inform}}" style="margin-top:15rpx">
+    <inform inform="{{inform}}"></inform>
+  </view>
+  <!-- 上课提醒 -->
+  <view class="wx-remind">
+    <view class="wx-remind-header">
+      <view class="wx-remind-title">
+        <text>上课提醒</text>
+        <text>{{time.month+1}}-{{time.date}} 周{{time.day != 0 ? time.day : 7}}</text>
+      </view>
+      <view class="wx-remind-detail" bindtap='setClass'>
+        <text>课程表</text>
+      </view>
+    </view>
+    <view class="wx-remind-body margin-top">
+      <view class="wx-remind-class  margin-top:100rpx;" bindtap='setClass' wx:for="{{course}}" wx:key="id">
+        <view class="wx-class-time color_{{index%2}} background-color_{{index%2}}">
+          <text>{{item.day}}</text>
+          <text>{{item.time}}</text>
+        </view>
+        <view class="wx-class-title color_{{index%2}} background-color_{{index%2}}">
+          <text>{{item.name}}</text>
+          <text><text class='iconfont icon-dingwei'></text>{{item.site}}</text>
+        </view>
+      </view>
+      <view wx:if="{{msg}}" class='wx-isclass'>{{msg}}</view>
+    </view>
+  </view>
+
+</view>

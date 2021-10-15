@@ -1,0 +1,176 @@
+page {
+  background-color: rgb(240, 240, 240);
+}
+/* 图片设置 */
+.image {
+  position: absolute;
+  top: 25rpx;
+  width: 55rpx;
+  height: 50rpx;
+}
+/* 班级 - 图片 */
+.image-class {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 箭头 - 图片 */
+.image-right {
+  width: 30rpx;
+  height: 30rpx;
+}
+.container {
+  padding: 0 0;
+}
+
+.bgcImage {
+  position: relative;
+  width: 100%;
+  height: 400rpx;
+  background-color: skyblue;
+}
+
+.userInfo {
+  position: absolute;
+  left: 80rpx;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+}
+/* 头像 */
+.userAvatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #fff;
+}
+/* 角色信息text */
+.userInfoTxt {
+  margin: 10rpx 0 0 20rpx;
+  color: rgb(233, 253, 253);
+  letter-spacing: 3rpx;
+}
+.userName {
+  margin-bottom: 10rpx;
+}
+.userAcademy {
+  font-size: 20rpx;
+}
+/* 班级/专业 */
+.userInfoDialog {
+  position: absolute;
+  bottom: -150rpx;
+  margin: 0 20rpx;
+  width: 710rpx;
+  height: 200rpx;
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+  box-shadow: #ccc  0 0 5rpx 2rpx;
+  color: rgb(106, 106, 106);
+}
+/* 班级 */
+.userClass {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.userClassLeft {
+  margin-left: 20rpx;
+}
+.userClassRight {
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 专业 */
+.userProfession {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.userProfessionLeft {
+  position: relative;
+  margin-left: 20rpx;
+}
+.userProfessionRight {
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 第二个Dialog */
+.more {
+  position: absolute;
+  bottom: -475rpx;
+  margin: 0 20rpx;
+  width: 710rpx;
+  height: 300rpx;
+  background-color: #fff;
+  border: 1rpx solid #ccc;
+  border-radius: 20rpx;
+  box-shadow: #ccc  0 0 5rpx 2rpx;
+  color: rgb(106, 106, 106);
+}
+/* 关于我们 */
+.aboutUs {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.aboutUsLeft {
+  margin-left: 20rpx;
+}
+.textMarginLeft {
+  margin-left: 55rpx;
+}
+.symbol {
+  margin-right: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 更新日志 */
+.updateNote {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.updateNoteLeft {
+  position: relative;
+  margin-left: 20rpx;
+}
+/* 登录 */
+.login {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.loginLeft {
+  position: relative;
+  margin-left: 20rpx;
+}

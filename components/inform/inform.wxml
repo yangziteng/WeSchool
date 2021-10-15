@@ -1,0 +1,11 @@
+<view class="inform">
+  <image class="inform-images" src="./images/inform.png"></image>
+  <swiper class="swiper-disabled" autoplay='true' interval='3500' duration='1000' circular='true' vertical='true'>
+    <swiper-item wx:for="{{inform}}" wx:key="id" bindtap='setFrom' id="{{item.title}}">
+      <view class='inform-comment' style="min-width: {{item.comment.length * 20}}rpx;">{{item.comment}}</view>
+      <view class='inform-name'>
+        <text>{{item.name}}</text>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

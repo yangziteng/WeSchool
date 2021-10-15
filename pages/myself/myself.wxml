@@ -1,0 +1,73 @@
+<view class="container">
+  <!-- 背景图片区域 -->
+  <view class="bgcImage">
+    <!-- 用户信息区域 -->
+    <view class="userInfo">
+      <!-- 头像 -->
+      <view class="userAvatar">
+        头像
+      </view>
+      <!-- Txt -->
+      <view class="userInfoTxt">
+        <!-- 姓名 -->
+        <view class="userName">
+          <view class="guest">访客 guest</view>
+        </view>
+        <!-- 学院 -->
+        <view class="userAcademy">
+          <view class="guestAcademy">访客学院</view>
+        </view>
+      </view>
+    </view>
+    <!-- 班级/专业Dialog -->
+    <view class="userInfoDialog">
+      <!-- 班级 -->
+      <view class="userClass">
+        <view class="userClassLeft">
+          <image src="images/class.png" class="image-class"></image>
+          <text class="textMarginLeft">班级</text>
+        </view>
+        <view class="userClassRight">访客班级</view>
+      </view>
+      <!-- 专业 -->
+      <view class="userProfession">
+        <view class="userProfessionLeft">
+        <image src="images/academy.png" class="image"></image>
+        <text class="textMarginLeft">专业</text>
+        </view>
+        <view class="userProfessionRight">访客专业</view>
+      </view>
+    </view>
+    <!-- 关于我们...Dialog -->
+    <view class="more">
+      <view class="aboutUs">
+        <view class="aboutUsLeft">
+          <image src="images/aboutUs.png" class="image"></image>
+          <text class="textMarginLeft">关于我们</text>
+        </view>
+        <view class="symbol">
+          <image src="images/right.png" class="image-right"></image>
+        </view>
+      </view>
+      <view class="updateNote">
+        <view class="updateNoteLeft">
+        <image src="images/update.png" class="image"></image>
+          <text class="textMarginLeft">更新日志</text>
+        </view>
+        <view class="symbol">
+          <image src="images/right.png" class="image-right"></image>
+        </view>
+      </view>
+      <view class="login">
+        <view class="loginLeft">
+          <image src="images/login.png" class="image"></image>
+          <text class="textMarginLeft">登录/注销账号</text>
+        </view>
+        <view class="symbol">
+          <image src="images/right.png" class="image-right"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

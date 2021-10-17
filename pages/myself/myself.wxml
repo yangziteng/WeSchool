@@ -1,3 +1,5 @@
+<import src="../../template/template.wxml"></import>
+
 <view class="container">
   <!-- 背景图片区域 -->
   <view class="bgcImage">
@@ -40,33 +42,9 @@
     </view>
     <!-- 关于我们...Dialog -->
     <view class="more">
-      <view class="aboutUs">
-        <view class="aboutUsLeft">
-          <image src="images/aboutUs.png" class="image"></image>
-          <text class="textMarginLeft">关于我们</text>
-        </view>
-        <view class="symbol">
-          <image src="images/right.png" class="image-right"></image>
-        </view>
-      </view>
-      <view class="updateNote">
-        <view class="updateNoteLeft">
-        <image src="images/update.png" class="image"></image>
-          <text class="textMarginLeft">更新日志</text>
-        </view>
-        <view class="symbol">
-          <image src="images/right.png" class="image-right"></image>
-        </view>
-      </view>
-      <view class="login">
-        <view class="loginLeft">
-          <image src="images/login.png" class="image"></image>
-          <text class="textMarginLeft">登录/注销账号</text>
-        </view>
-        <view class="symbol">
-          <image src="images/right.png" class="image-right"></image>
-        </view>
-      </view>
+      <block wx:for="{{list}}">
+        <template is="navigate_item" data="{{item, right:'images/right.png'}}"></template>
+      </block>
     </view>
   </view>
 

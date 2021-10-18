@@ -1,0 +1,161 @@
+<view style="z-index:2; position:fixed; background-color: white;">
+  <!-- 头部 -->
+  <view>
+    <view style="height: {{statusBarHeight}}px;" />
+    <view style=" height: {{lineHeight}}px;">
+      <view bindtap="showCurriculumPoint" class="cur-week" style="height: {{rectHeight + 10}}px;">
+        <text>{{curWeek}}</text>
+        <image class="cur-week-img" src="./images/箭头 下.png" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 课表弹出 -->
+  <scroll-view
+    style="height: 140rpx; width: 750rpx; background-color: #EDEDED; padding-left: 10rpx; white-space: nowrap;"
+    scroll-x="true" scroll-into-view="index{{onShowCurriculumPoint}}" enable-flex="false" scroll-with-animation="true"
+    bounces="true" show-scrollbar="false" wx:if="{{onShowCurriculumPoint}}">
+    <view id="index{{index+1}}"
+      style="font-size: 24rpx; text-align: center; width: 130rpx;  display: inline-block;"
+      wx:key="item" wx:for="(item, index) in 20">
+    <view style=" background-color: aqua; height: 110rpx; top: 12rpx; ">
+
+      <view style="padding-top: 15rpx; ">第{{index+1}}周</view>
+
+      <view style="padding-top:5rpx; margin-left: 16rpx; width: 110rpx;">
+        <view wx:for="{{35}}" wx:key="idx"
+          style="margin:2rpx; float:left; display: flex; flex-direction:row; flex-wrap:wrap; align-content: space-between; ">
+          <view style="border-radius: 100rpx; width: 11rpx; height: 11rpx; background-color: #D4D4D4;"></view>
+        </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- 首栏 月份+星期几 -->
+  <view class="top">
+    <text class='week'>{{month}}\n月</text>
+    <view wx:for="{{['一','二','三','四','五','六','日']}}" wx:key="unique"
+      class="top-text {{dayOfWeek==(index+1)&&weekNow==whichWeek?'top-text-strong':''}}">
+      <view>周{{item}}</view>
+      <view class="after-left {{dayOfWeek==(index+1)&&weekNow==whichWeek?'after-left-strong':''}}">{{arr[index]}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view
+  style="padding-top: {{(onShowCurriculumPoint? 140: 0) + 65 + (statusBarHeight + lineHeight) * 2}}rpx; width: 100%;">
+</view>
+
+<view style="z-index: -1;" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"
+  animation="{{ani1}}">
+  <!-- 滑块部分 -->
+  <scroll-view wx:if="{{wlist.length != 0}}">
+
+    <view class="timetable">
+      <view>
+        <view wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12]}}" wx:key="unique" class="left">
+          <view>{{item}}</view>
+          <view class="after-left1">{{courseTime[index]}}</view>
+        </view>
+      </view>
+
+      <!--课表-->
+      <view wx:for="{{wlist}}" wx:key="unique" class="kbcontain">
+
+        <view class="kb" bindtap="showCardView" data-index="{{index}}"
+          style="top: {{(item.skjc-1)*110}}rpx; left:{{(item.xqj-1)*100}}rpx; height:{{item.skcd*110-5}}rpx; background-color:{{colorArrays[index%20]}}; z-index:0">
+          <view class="smalltext">{{item.kcmc}}@{{item.jxcdmc}}
+          </view>
+        </view>
+
+        <!-- Todo 重叠课程右上角三角形 -->
+        <view wx-if="{{isScheduled[index]&&hasData[item.Course_Time][item.Course_Start]>1}}" class="triangle-topright"
+          style="margin-left:{{(item.Course_Time-1)*99+(item.Course_Time==3?78:77)}}rpx;margin-top:{{(item.Course_Start-1)*100+5}}rpx;border-color: {{colorArrays[item.Course_Color%20]}}; z-index:{{1000*index}};">
+        </view>
+
+
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class='wx-isclass' wx:if="{{wlist.length == 0}}">今天没有课，出去玩吧</view>
+  <view class='pd2' wx:if="{{wlist.length == 0}}"> </view>
+</view>
+
+
+<view class="add " wx:if="{{showAdd}}">
+  <!-- 背景蒙版 -->
+  <view class="add_background" bindtap="feedbackHandler"></view>
+
+  <view class="add_contain {{add_style}}">
+    <view class="add_title">
+      <text>课程添加</text>
+    </view>
+
+    <!-- 课程名称 -->
+    <view class="add_block">
+      <label>*课程名</label>
+      <input bindblur="setCPT" id="course"></input>
+    </view>
+    <!-- 教室 -->
+    <view class="add_block">
+      <label>教室</label>
+      <input bindblur="setCPT" id="place"></input>
+    </view>
+    <!-- 老师 -->
+    <view class="add_block">
+      <label>老师</label>
+      <input bindblur="setCPT" id="teacher"></input>
+    </view>
+
+    <!-- 星期 + 节数 -->
+    <view class="add_wjs">
+
+      <view class="add_wjs_block">
+        <label class="add_wjs_block_title">星期</label>
+        <!-- 选择星期 -->
+        <picker mode="selector" bindchange="setCPT" value="{{WeekIndex}}" range="{{Week}}" class="add_picker"
+          id="WeekIndex">
+          <label>{{Week[WeekIndex]}}</label>
+        </picker>
+      </view>
+
+      <view style="height:100%;text-align:center;color:rgb(200,200,200)">|</view>
+
+      <view class="add_wjs_block">
+        <label class="add_wjs_block_title">节数</label>
+        <!-- 选择节数 -->
+        <picker mode="multiSelector" bindcolumnchange="ChangeSectionIndex" value="{{sectionIndex}}" range="{{section}}"
+          class="add_picker">
+          <text space="emsp">{{section[0][sectionIndex[0]]}} - {{section[0][sectionIndex[1]]}}</text>
+        </picker>
+      </view>
+
+
+    </view>
+
+    <!-- 上课周数 -->
+    <view class="add_week_title">
+      <label>上课周数</label>
+    </view>
+    <view class="add_week">
+      <view class="add_weekBtn" wx:for="{{week}}" wx:key="key">
+        <label id="{{index+1}}" bindtap="changeWB"
+          class="{{week[index][1]?'add_weekBtn_select':'add_weekBtn_noSelect'}}">
+          {{index+1}}
+        </label>
+      </view>
+
+    </view>
+
+    <!-- 按钮 -->
+    <view class="add_btn">
+      <button bindtap="feedbackHandler">取 消</button>
+      <button bindtap="addSubmit" class="{{addSubmitStyle?'cansubmit':''}}">保 存</button>
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,43 @@
+.iconnBar{
+  flex-direction: row;
+  display: flex;
+  background-color: #fff;
+  border-radius: 20rpx;
+  width: 731rpx;
+  /* height: 300rpx; */
+  flex-wrap: wrap;
+}
+
+.iconn_item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 25%; */
+  width: 146rpx;
+  padding: 10rpx 0 10rpx 0;
+  height: calc(150rpx - 30rpx);
+}
+
+.iconn_item_url {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 120rpx;
+}
+
+.iconn_item_url image {
+  width: 80rpx;
+  height: 80rpx;
+  display: block;
+}
+
+.iconn_item_url text {
+  display: block;
+  color: #888;
+  margin-top: 10rpx;
+  line-height: 30rpx;
+  font-size: 26rpx;
+  text-align: center;
+}

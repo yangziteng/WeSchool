@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/more/more",
+    "pages/curriculum/curriculum",
+    "pages/myself/myself"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "We校园",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F6F6F6"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/images/tabbar/basics.png",
+        "selectedIconPath": "/images/tabbar/basics_cur.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/curriculum/curriculum",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "text": "课表"
+      },
+      {
+        "pagePath": "pages/more/more",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "text": "校园圈"
+      },
+      {
+        "pagePath": "pages/myself/myself",
+        "iconPath": "/images/tabbar/about.png",
+        "selectedIconPath": "/images/tabbar/about_cur.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "iconBar": "/components/iconBar/iconBar",
+    "inform": "/components/inform/inform"
+  },
+  "backgroundColor": "#F6F6F6",
+  "navigationBarTitleText": "We校园",
+  "navigationBarBackgroundColor": "#F6F6F6"
+}

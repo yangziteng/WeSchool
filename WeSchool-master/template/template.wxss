@@ -10,11 +10,7 @@
 .navigate_item image:first-child{
   width: 50rpx;
   height: 50rpx;
-<<<<<<< HEAD
   padding: 0 0 0 20rpx;
-=======
-  padding: 0 20rpx;
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
 }
 .navigate_item text{
   flex: 1;
@@ -27,7 +23,6 @@
   width: 30rpx;
   height: 30rpx;
   padding: 0 20rpx;
-<<<<<<< HEAD
 }
 /* userInfo_item */
 .userInfo_item{
@@ -56,6 +51,3 @@
   color: rgb(186, 186, 186);
   letter-spacing: 2rpx;
 }
-=======
-}
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd

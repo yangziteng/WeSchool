@@ -3,7 +3,30 @@
 page {
   background-color: rgb(240, 240, 240);
 }
+<<<<<<< HEAD
 
+=======
+/* 图片设置 */
+.image {
+  position: absolute;
+  top: 25rpx;
+  width: 55rpx;
+  height: 50rpx;
+}
+/* 班级 - 图片 */
+.image-class {
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+/* 箭头 - 图片 */
+.image-right {
+  width: 30rpx;
+  height: 30rpx;
+}
+>>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
 .container {
   padding: 0 0;
 }
@@ -58,12 +81,58 @@ page {
   box-shadow: #ccc  0 0 5rpx 2rpx;
   color: rgb(106, 106, 106);
 }
+<<<<<<< HEAD
 
 /* 第二个Dialog */
 .more {
   margin: 0 20rpx;
   margin-top: 175rpx;
   /* 175 - 150 = 间距 */
+=======
+/* 班级 */
+.userClass {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.userClassLeft {
+  margin-left: 20rpx;
+}
+.userClassRight {
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 专业 */
+.userProfession {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.userProfessionLeft {
+  position: relative;
+  margin-left: 20rpx;
+}
+.userProfessionRight {
+  margin-right: 20rpx;
+  font-size: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 第二个Dialog */
+.more {
+  position: absolute;
+  bottom: -475rpx;
+  margin: 0 20rpx;
+>>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
   width: 710rpx;
   height: 300rpx;
   background-color: #fff;
@@ -72,7 +141,58 @@ page {
   box-shadow: #ccc  0 0 5rpx 2rpx;
   color: rgb(106, 106, 106);
 }
+<<<<<<< HEAD
 
 .textMarginLeft {
   margin-left: 55rpx;
 }
+=======
+/* 关于我们 */
+.aboutUs {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.aboutUsLeft {
+  margin-left: 20rpx;
+}
+.textMarginLeft {
+  margin-left: 55rpx;
+}
+.symbol {
+  margin-right: 20rpx;
+  color: rgb(186, 186, 186);
+  letter-spacing: 2rpx;
+}
+/* 更新日志 */
+.updateNote {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.updateNoteLeft {
+  position: relative;
+  margin-left: 20rpx;
+}
+/* 登录 */
+.login {
+  position: relative;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1rpx solid black; */
+  line-height: 100rpx;
+}
+.loginLeft {
+  position: relative;
+  margin-left: 20rpx;
+}
+>>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd

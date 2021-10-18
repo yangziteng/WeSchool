@@ -9,10 +9,6 @@
       <view class="userAvatar">
         头像
       </view>
-<<<<<<< HEAD
-=======
-      <!-- Txt -->
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
       <view class="userInfoTxt">
         <!-- 姓名 -->
         <view class="userName">
@@ -26,44 +22,17 @@
     </view>
     <!-- 班级/专业Dialog -->
     <view class="userInfoDialog">
-<<<<<<< HEAD
       <block wx:for="{{userInfo}}" wx:key="index">
         <template is="userInfo_item" data="{{item}}">
         </template>
-=======
-      <!-- 班级 -->
-      <view class="userClass">
-        <view class="userClassLeft">
-          <image src="images/class.png" class="image-class"></image>
-          <text class="textMarginLeft">班级</text>
-        </view>
-        <view class="userClassRight">访客班级</view>
-      </view>
-      <!-- 专业 -->
-      <view class="userProfession">
-        <view class="userProfessionLeft">
-        <image src="images/academy.png" class="image"></image>
-        <text class="textMarginLeft">专业</text>
-        </view>
-        <view class="userProfessionRight">访客专业</view>
-      </view>
-    </view>
-    <!-- 关于我们...Dialog -->
-    <view class="more">
-      <block wx:for="{{list}}">
-        <template is="navigate_item" data="{{item, right:'images/right.png'}}"></template>
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
       </block>
     </view>
   </view>
 
-<<<<<<< HEAD
   <!--  关于我们...Dialog -->
   <view class="more">
     <block wx:for="{{list}}" wx:key="index">
       <template is="navigate_item" data="{{item, right:'images/right.png'}}"></template>
     </block>
   </view> 
-=======
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
 </view>

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "description": "项目配置文件",
   "packOptions": {
     "ignore": []
@@ -74,3 +75,80 @@
     }
   }
 }
+=======
+   "description": "项目配置文件",
+   "packOptions": {
+     "ignore": []
+   },
+   "setting": {
+     "urlCheck": false,
+     "es6": true,
+     "enhance": true,
+     "postcss": true,
+     "preloadBackgroundData": false,
+     "minified": true,
+     "newFeature": false,
+     "coverView": true,
+     "nodeModules": false,
+     "autoAudits": false,
+     "showShadowRootInWxmlPanel": true,
+     "scopeDataCheck": false,
+     "uglifyFileName": false,
+     "checkInvalidKey": true,
+     "checkSiteMap": true,
+     "uploadWithSourceMap": true,
+     "compileHotReLoad": true,
+     "lazyloadPlaceholderEnable": false,
+     "useMultiFrameRuntime": true,
+     "useApiHook": true,
+     "useApiHostProcess": true,
+     "babelSetting": {
+       "ignore": [],
+       "disablePlugins": [],
+       "outputPath": ""
+     },
+     "enableEngineNative": false,
+     "useIsolateContext": true,
+     "userConfirmedBundleSwitch": false,
+     "packNpmManually": false,
+     "packNpmRelationList": [],
+     "minifyWXSS": true,
+     "disableUseStrict": false,
+     "showES6CompileOption": false,
+     "useCompilerPlugins": false
+   },
+   "compileType": "miniprogram",
+   "libVersion": "2.19.5",
+   "appid": "wxf84451020f439de9",
+   "projectname": "WeSchool",
+   "debugOptions": {
+     "hidedInDevtools": []
+   },
+   "scripts": {},
+   "staticServerOptions": {
+     "baseURL": "",
+     "servePath": ""
+   },
+   "isGameTourist": false,
+   "condition": {
+     "search": {
+       "list": []
+     },
+     "conversation": {
+       "list": []
+     },
+     "game": {
+       "list": []
+     },
+     "plugin": {
+       "list": []
+     },
+     "gamePlugin": {
+       "list": []
+     },
+     "miniprogram": {
+       "list": []
+     }
+   }
+ }
+>>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd

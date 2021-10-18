@@ -18,7 +18,6 @@ Page({
         title: "登录/注销账号",
         click: "login"
       }
-<<<<<<< HEAD
     ],
     userInfo:[
       {
@@ -32,23 +31,18 @@ Page({
         littleTitle: "访客专业",
         click: "academy"
       }
-=======
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
     ]
   },
   onLoad() {
     
   },
   
-<<<<<<< HEAD
   class(e){
     console.log(e,"班级");
   },
   academy(e){
     console.log(e,"专业");
   },
-=======
->>>>>>> 1f0eda0809a5937cafb7a3162b0db55dd478befd
   about(e){
     console.log(e)
     console.log("关于我们")
